@@ -12,11 +12,16 @@
     "jquery": "^3.7.1",
     "meteor-node-stubs": "^1.2.12"
   },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/meteor": "^2.9.9",
+    "@types/node": "^24.0.0"
+  },
   "meteor": {
     "mainModule": {
-      "client": "client/main.js",
-      "server": "server/main.js"
+      "client": "client/main.ts",
+      "server": "server/main.ts"
     },
-    "testModule": "tests/main.js"
+    "testModule": "tests/main.ts"
   }
 }

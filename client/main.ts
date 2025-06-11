@@ -1,7 +1,11 @@
-import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
+import { Template } from 'meteor/templating';
 
 import './main.html';
+
+interface MyTemplateInstance extends Blaze.TemplateInstance {
+  counter: ReactiveVar<number>;
+}
 
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
@@ -10,7 +14,7 @@ Template.hello.onCreated(function helloOnCreated() {
 
 Template.hello.helpers({
   counter() {
-    return Template.instance().counter.get();
+    return (Template.instance() as MyTemplateInstance).counter.get();
   },
 });
 
