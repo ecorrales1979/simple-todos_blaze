@@ -18,6 +18,8 @@ Template.form.events({
     const target = event.target as TaskFormElements;
     const text = target.text.value;
 
+    if (!text) return;
+
     TaskCollection.insert({
       text,
       createdAt: new Date(),
