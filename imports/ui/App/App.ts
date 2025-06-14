@@ -7,7 +7,7 @@ import './App.view.html';
 
 Template.mainContainer.helpers({
   tasks() {
-    return TaskCollection.find();
+    return TaskCollection.find({}, { sort: { createdAt: -1 } });
   },
 });
 
