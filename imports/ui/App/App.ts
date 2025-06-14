@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 
 import { TaskCollection } from '../../api/tasks/TaskCollection';
 // import './App.styles.css';
+import { TaskFormElements } from '../../api/tasks/types';
 import './App.view.html';
 
 Template.mainContainer.helpers({
@@ -11,10 +12,10 @@ Template.mainContainer.helpers({
 });
 
 Template.form.events({
-  'submit .task-form'(event: Event) {
+  'submit .task-form': (event: Event) => {
     event.preventDefault();
 
-    const target = event.target as HTMLFormElement;
+    const target = event.target as TaskFormElements;
     const text = target.text.value;
 
     TaskCollection.insert({

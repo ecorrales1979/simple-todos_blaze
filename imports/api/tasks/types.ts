@@ -3,3 +3,7 @@ export type Task = {
   text: string;
   createdAt?: Date;
 };
+
+export type TaskFormElements = HTMLFormElement & {
+  text: HTMLInputElement;
+};
