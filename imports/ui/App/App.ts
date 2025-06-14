@@ -1,9 +1,9 @@
 import { Template } from 'meteor/templating';
 
 import { TaskCollection } from '../../api/tasks/TaskCollection';
-// import './App.styles.css';
 import { TaskFormElements } from '../../api/tasks/types';
 import './App.view.html';
+import './Task';
 
 Template.mainContainer.helpers({
   tasks() {

@@ -19,7 +19,10 @@
 </template>
 
 <template name="task">
-    <li>{{text}}</li>
+    <li>
+        <input type="checkbox" checked="{{isChecked}}" class="toggle-checked">
+        <span>{{text}}</span>
+    </li>
 </template>
 
 <template name="form">
