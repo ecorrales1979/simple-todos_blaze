@@ -1,5 +1,6 @@
-import { TaskCollection } from '../../api/tasks/TaskCollection';
-import { Task } from '../../api/tasks/types';
+import { TaskCollection } from '../../../api/tasks/TaskCollection';
+import { Task } from '../../../api/tasks/types';
+import './Task.view.html';
 
 Template.task.events({
   'click .toggle-checked': function () {
