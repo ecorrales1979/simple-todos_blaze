@@ -104,6 +104,15 @@ header {
   background-color: #315481;
 }
 
+.filter {
+  display: flex;
+  justify-content: center;
+}
+
+.filter > button {
+  background-color: #62807e;
+}
+
 .tasks {
   list-style-type: none;
   padding-inline-start: 0;
