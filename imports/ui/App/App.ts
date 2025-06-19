@@ -28,9 +28,15 @@ Template.mainContainer.helpers({
       sort: { createdAt: -1 },
     }).fetch();
   },
-  hideCompleted() {
+  hideCompleted: function () {
     const template = Template.instance() as MainContainerInstance;
     return template.state.get(HIDE_COMPLETED_STRING);
+  },
+  incompleteCount: function () {
+    const incompleteTasksCount = TaskCollection.find({
+      isChecked: { $ne: true },
+    }).count();
+    return incompleteTasksCount ? `(${incompleteTasksCount})` : '';
   },
 });
 
